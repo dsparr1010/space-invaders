@@ -13,6 +13,8 @@ pygame.display.set_icon(icon)
 playerImg = pygame.image.load("space-invaders.png")
 playerX = 370
 playerY = 480
+playerX_change = 0
+playerY_change = 0
 
 def player(x, y):
     screen.blit(playerImg, (x, y))
@@ -29,9 +31,15 @@ while running:
         # if keystroke event, check whether right or left
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                print('left arrow pressed')
+                playerX_change = -0.5
             if event.key == pygame.K_RIGHT:
-                print('right arrow pressed')
+                playerX_change = 0.5
 
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+                playerX_change = 0
+             
+
+    playerX += playerX_change
     player(playerX, playerY)
     pygame.display.update()
