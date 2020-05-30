@@ -5,4 +5,8 @@ concepts like : how to get a character to on the x y plane on key down, how to r
 add background images and .wav files to play continuously and on collision.
 
 ## Installation
+```python
 pip install -r requirements.txt
+```
+
+![screenshot](/screenshots/2.png)
