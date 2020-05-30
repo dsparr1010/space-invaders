@@ -9,4 +9,4 @@ add background images and .wav files to play continuously and on collision.
 pip install -r requirements.txt
 ```
 
-![screenshots](/images/2.png)
+![screenshots](images\2.png)
